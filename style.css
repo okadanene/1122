@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+/* ページ全体 */
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+}
+/* ページ全体 */
+
+/* ヘッダー */
+
+header {
+    background-color: white;
+    height: 10%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 30px 4% 10px;
+}
+
+
+ul{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    font-size: 20px;
+}
+
+li {
+    margin: 0 0 0 15px;
+}
+
+nav {
+    margin: 0 auto;
+}
+
+
+/* ヘッダー */
+
+.main {
+    padding: 400px 0;
+}
+
+/* セクション１ */
+
+h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.section1 i {
+    font-size: 70px;
+}
+
+p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.section1 {
+    margin-bottom: 200px;
+}
+
+.item {
+    margin: 100px;
+}
+
+/* セクション１ */
+
+/* セクション２ */
+
+.section2-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列のグリッドを作成 */
+    gap: 1px; /* グリッドアイテム間の隙間（余白） */
+    padding: 0 200px;
+}
+
+.recruit {
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    width: 300px; 
+    font-size: 17px;
+    padding: 20px;
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+    transition: 1s;
+}
+
+button:hover {
+    background-color: black;
+    color: #eee;
+}
+
+.section2 h3 {
+    margin: 100px;
+    font-size: 30px;
+}
+
+
+
+/* セクション２ */
+
+/* セクション３ */
+
+.section3 {
+    margin: 100px;
+    text-align: left;
+    margin: 200px;
+}
+
+#company {
+    font-size: 50px;
+    padding: 40px;
+}
+
+.section3-1 {
+    display: flex;
+}
+
+.section3-2 {
+    display: flex;
+    padding-left: 100px;
+}
+
+.section3-item {
+    padding: 40px;
+}
+
+/* セクション３ */
+
+/* フッター */
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 30px 4% 10px;
+}
+
+.footer-menu a {
+    color: white;
+}
+
+/* フッター */
+
+/* 採用情報ページ */
+
+.recruit-page {
+    text-align: left;
+    padding: 300px;
+}
+
+td {
+    padding: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+}
+
+td p {
+    font-size: 15px;
+}
+
+
+.sp-nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+   transform: translateY(-100%);
+}
+
+.sp-nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.sp-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.sp-nav li span {
+    font-size: 15px;
+    color: #fff;
+}
+
+.sp-nav li a, .sp-nav li span {
+    display: block;
+    padding: 20px 0;
+}
+
+/*基準となるli要素*/
+.sp-nav .close {
+    position: relative;
+    padding-left: 20px;
+}
+ /*バツ印線1*/
+.sp-nav .close::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( 45deg );
+}
+/*バツ印線2*/
+.sp-nav .close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( -45deg );
+}
+
+.toggle {
+    transform: translateY( 0 );
+    opacity: 1;
+}
+
+.sp-nav a {
+    color: #eee;
+}
+
+/* 採用情報ページ */
+
+
+@media screen and (max-width:768px) {
+
+.header-menu {
+    display: none;
+}
+.section2-item {
+    padding: 0;
+    flex-direction: column;
+    display: block;
+}
+
+.section3 {
+    margin: 00px;
+}
+
+#menu {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 25px;
+    margin: 0 0 0 auto;
+ }
+
+#menu span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: translateY(-50%);
+}
+
+#menu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+#menu::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background-color: black;
+}
+
+}
